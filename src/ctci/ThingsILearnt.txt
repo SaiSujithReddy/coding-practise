@@ -110,6 +110,25 @@ if(A ==null | B == null)
 {
 	
 }
+--------------------------------------------------------------------------------------------------------------------------------------
 
+15 . Correct of way of declaring matrix or double array
 
+int[][] matrixA = new int[N][N];  --> correct
+int[][] matrixA = new int[N][N]();  --> Wrong
+int[N][N] matrixA = new int[N][N]();  --> Wrong
 
+--------------------------------------------------------------------------------------------------------------------------------------
+ 16. Correct way of creating a method for double array 
+ 
+ static int[][] rotateMatrix(int[][] matrixA)  --> correct
+ static int[N][N] rotateMatrix(int[N][N] matrixA)   --> Wrong
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 17.add-arraylist-to-another-arraylist-in-java
+ you can add aaryList1.add(arrayLis2), but again when you change arrayList2 entire list --> arrayList1 gets changed.
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 18. Remove all elements from array List
+ arrayList.clear();
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 19.

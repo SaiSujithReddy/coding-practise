@@ -1,3 +1,5 @@
+/*Implement a function void reverse(char* str) in C or C++ which reverses a nullterminated
+string.*/
 package ctci;
 
 public class CTCI1dot2v1 {
