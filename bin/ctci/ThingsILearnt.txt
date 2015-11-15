@@ -131,4 +131,47 @@ int[N][N] matrixA = new int[N][N]();  --> Wrong
  18. Remove all elements from array List
  arrayList.clear();
  --------------------------------------------------------------------------------------------------------------------------------------
- 19.
+ 19. How to Iterate through LinkedList Instance in Java?
+ http://crunchify.com/how-to-iterate-through-linkedlist-instance-in-java/
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 20.bit wise operation 1000 - 0110
+ Answer is 0010
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 21.A indicates an XOR operation, and ~ is a not (negation) operation
+ X ^ X = 0
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 22. Common mistakes when i code in notepad
+ 
+ Don't forget to import ArrayList or something
+ Make method static
+ Typo println 
+ There is No length() for arrayList there is size()
+ There is no arrayList.getValue(i) ...there is arrayList.get(i)
+ for methods keep adding the indendation then and there, later at the end of coding it will be cumbersome.
+ Don't forget void or return type
+ Always create object of class in public static void main, this way you can escape from making all variables or methods to static
+ Only helper methods can be private
+ always create an instance of class and call the method inside the class.
+ array.Length()   ---> WRONGcheck the Spelling of Length & no method by name length
+  array.Length()   ---> WRONG & no method by name length .. just a instance length
+ You CANNOT have a method plus string in System.out.print("Before sorting " , printArray(array));
+ You need not import "import java.util.Arrays;" If you do int[] Array ={1,2,3,,45}; in your program.   
+ If you have already declared int i=0; previous to the for loop , don't declare it in the forlopp;
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 23. How to declare an array in Java ( int or string)
+ 
+ int[] myIntArray = new int[3];
+int[] myIntArray = {1,2,3};
+int[] myIntArray = new int[]{1,2,3};
+For classes, for example String, it's the same:
+
+String[] myStringArray = new String[3];
+String[] myStringArray = {"a","b","c"};
+String[] myStringArray = new String[]{"a","b","c"};
+ --------------------------------------------------------------------------------------------------------------------------------------
+
+24. When asked to reverse print a linkedlist
+
+---You need not reverse the linkedlist -- but you just need to print the order of the linkedlist
+ --------------------------------------------------------------------------------------------------------------------------------------
+25. 
