@@ -56,7 +56,7 @@ for (char ch: "xyz".toCharArray()) {
 --------------------------------------------------------------------------------------------------------------------------------------
 6.  Cannot instantiate of type HashMap<Character,?> map = new HashMap<Character,?>();
 
-always you should instatiate with speficis like ew HashMap<Character,String>()
+always you should instatiate with speficis like new HashMap<Character,String>()
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -112,7 +112,7 @@ if(A ==null | B == null)
 }
 --------------------------------------------------------------------------------------------------------------------------------------
 
-15 . Correct of way of declaring matrix or double array
+15 . Correct way of declaring matrix or double array
 
 int[][] matrixA = new int[N][N];  --> correct
 int[][] matrixA = new int[N][N]();  --> Wrong
@@ -133,6 +133,22 @@ int[N][N] matrixA = new int[N][N]();  --> Wrong
  --------------------------------------------------------------------------------------------------------------------------------------
  19. How to Iterate through LinkedList Instance in Java?
  http://crunchify.com/how-to-iterate-through-linkedlist-instance-in-java/
+ 
+    LinkedList<String> linkedList = new LinkedList<String>();
+	        linkedList.add("eBay");
+	        linkedList.add("Paypal");
+	        linkedList.add("Google");
+	        linkedList.add("Yahoo");
+	        linkedList.add("IBM");
+	        linkedList.add("Facebook");
+ 
+	        // ListIterator approach
+	        System.out.println("ListIterator Approach: ");
+	        ListIterator<String> listIterator = linkedList.listIterator();
+	        while (listIterator.hasNext()) {
+	            System.out.println(listIterator.next());
+	        }
+ 
  --------------------------------------------------------------------------------------------------------------------------------------
  20.bit wise operation 1000 - 0110
  Answer is 0010
@@ -140,7 +156,7 @@ int[N][N] matrixA = new int[N][N]();  --> Wrong
  21.A indicates an XOR operation, and ~ is a not (negation) operation
  X ^ X = 0
  --------------------------------------------------------------------------------------------------------------------------------------
- 22. Common mistakes when i code in notepad
+ 22. Common mistakes when i code in NOTEPAD or TEXTPAD
  
  Don't forget to import ArrayList or something
  Make method static
@@ -153,7 +169,7 @@ int[N][N] matrixA = new int[N][N]();  --> Wrong
  Only helper methods can be private
  always create an instance of class and call the method inside the class.
  array.Length()   ---> WRONGcheck the Spelling of Length & no method by name length
-  array.Length()   ---> WRONG & no method by name length .. just a instance length
+  array.length()   ---> WRONG & no method by name length .. just a instance length
  You CANNOT have a method plus string in System.out.print("Before sorting " , printArray(array));
  You need not import "import java.util.Arrays;" If you do int[] Array ={1,2,3,,45}; in your program.   
  If you have already declared int i=0; previous to the for loop , don't declare it in the forlopp;
@@ -185,4 +201,14 @@ String[] myStringArray = new String[]{"a","b","c"};
 
 ---You need not reverse the linkedlist -- but you just need to print the order of the linkedlist
  --------------------------------------------------------------------------------------------------------------------------------------
-25. 
+25. How to split a complete string in to letters in java 
+String x = "{}{}{{{}}{{{{{}}";
+		x.split("");
+
+Better --> String input ="{}{}{}{}{"
+        char[] inputArr=input.toCharArray();		
+ --------------------------------------------------------------------------------------------------------------------------------------
+26.difference between stack and queue in java
+LIFO FIFO
+ --------------------------------------------------------------------------------------------------------------------------------------
+27. 
