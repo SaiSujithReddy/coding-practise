@@ -157,6 +157,17 @@ int[N][N] matrixA = new int[N][N]();  --> Wrong
  You CANNOT have a method plus string in System.out.print("Before sorting " , printArray(array));
  You need not import "import java.util.Arrays;" If you do int[] Array ={1,2,3,,45}; in your program.   
  If you have already declared int i=0; previous to the for loop , don't declare it in the forlopp;
+ 
+ After Classname there should be no ()  .... its a mistake ..only for method these exists
+ In a HashSet there is no .get method & no .put method  .... check for .contains method & .add method. example below
+ HashSet<Integer> hSet = new HashSet<Integer>();
+
+		//loop elemnt of arrray and keep it in hashset
+		
+		for(int i : duplicateArray){
+			if(hSet.contains(i)){
+				hSet.add(i);
+Always the new object should start with small letters.
  --------------------------------------------------------------------------------------------------------------------------------------
  23. How to declare an array in Java ( int or string)
  
