@@ -52,6 +52,8 @@ public class ArraySort
 			{
 				System.out.println("tempDesiredPosition " + B[i] + "A[i] is" + i);
 				swap(B[i],i);
+				printStringArray(A);
+				printIntArray(B);
 			}
 		}
 	}
