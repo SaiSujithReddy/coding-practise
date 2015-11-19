@@ -1,0 +1,273 @@
+1.  If A method contains for loop - > How to exit from for outer forloop if an inner for loop fails
+  public class Test {
+  public static void main(String[] args) {
+    outerloop:
+    for (int i=0; i < 5; i++) {
+      for (int j=0; j < 5; j++) {
+        if (i * j > 6) {
+          System.out.println("Breaking");
+          break outerloop;
+        }
+        System.out.println(i + " " + j);
+      }
+    }
+    System.out.println("Done");
+  }
+}
+--------------------------------------------------------------------------------------------------------------------------------------
+
+2. If A method contains for loop - > How to exit from for Method if a for loop fails
+
+ Use the return keyword to exit from a method.
+
+public void someMethod() {
+    //... a bunch of code ...
+    if (someCondition()) {
+        return;
+    }
+}
+From the Java Tutorial that I linked to above:
+
+Any method declared void doesn't return a value. It does not need to contain a return statement, but it may do so. In such a case, a return statement can be used to branch out of a control flow block and exit the method and is simply used like this:
+
+return;
+--------------------------------------------------------------------------------------------------------------------------------------
+
+3. Difference between a Unicode String and Ascii code String
+http://stackoverflow.com/questions/19212306/difference-between-ascii-and-unicode
+ASCII defines 128 characters, which map to the numbers 0–127. Unicode defines (less than) 221 characters, which, similarly, map to numbers 0–221 (though not all numbers are currently assigned, and some are reserved).
+
+Unicode is a superset of ASCII, and the numbers 0–128 have the same meaning in ASCII as they have in Unicode. For example, the number 65 means "Latin capital 'A'".
+
+Because Unicode characters don't generally fit into one 8-bit byte, there are numerous ways of storing Unicode characters in byte sequences, such as UTF-32 and UTF-8.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+4. There cannot be  a ASCII string of length more than 256 with all unique characters.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+5.How to get each character in a string using for each
+http://stackoverflow.com/questions/2451650/how-do-i-apply-the-for-each-loop-to-every-character-in-a-string
+The easiest way to for-each every char in a String is to use toCharArray():
+
+for (char ch: "xyz".toCharArray()) {
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+6.  Cannot instantiate of type HashMap<Character,?> map = new HashMap<Character,?>();
+
+always you should instatiate with speficis like new HashMap<Character,String>()
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+7. HashMap<char,String> doesn't work why ?
+instead of char it should be Character 
+http://stackoverflow.com/questions/13216314/hashmap-does-not-work-with-int-char
+
+Generic parameters can only bind to reference types, not primitive types, so you need to use the corresponding wrapper types. Try HashMap<Character, Integer> instead.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+8. In HashSet how do add an element.
+HashSet<Character> map;
+map.add(character)
+where as in Hasmap you do map.put(character);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+9. Package name convention ?
+
+should always be small letters
+--------------------------------------------------------------------------------------------------------------------------------------
+
+10. No reverse method in string exists
+--------------------------------------------------------------------------------------------------------------------------------------
+11.	word = word.replace(word.charAt(word.length()-i-1), temp);
+	
+	Above one will replace all the characters equals to  word.charAt(word.length()-i-1) with temp, not only the character at that index
+	
+12. Replace a character at a specific index in a string?
+
+You cannot replace a character at specific index in a string since they are immutable;
+http://stackoverflow.com/questions/6952363/replace-a-character-at-a-specific-index-in-a-string
+
+You need to create a new string with the character replaced.
+
+String myName = "domanokz";
+String newName = myName.substring(0,4)+'x'+myName.substring(5);
+Or you can use a StringBuilder:
+
+StringBuilder myName = new StringBuilder("domanokz");
+myName.setCharAt(4, 'x');
+
+System.out.println(myName);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+13. For reversing a string use string builder instead of creating more and more strings since string is immutable
+--------------------------------------------------------------------------------------------------------------------------------------
+14. How to check if two string are null at the same time
+
+if(A ==null | B == null)
+{
+	
+}
+--------------------------------------------------------------------------------------------------------------------------------------
+
+15 . Correct way of declaring matrix or double array
+
+int[][] matrixA = new int[N][N];  --> correct
+int[][] matrixA = new int[N][N]();  --> Wrong
+int[N][N] matrixA = new int[N][N]();  --> Wrong
+
+--------------------------------------------------------------------------------------------------------------------------------------
+ 16. Correct way of creating a method for double array 
+ 
+ static int[][] rotateMatrix(int[][] matrixA)  --> correct
+ static int[N][N] rotateMatrix(int[N][N] matrixA)   --> Wrong
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 17.add-arraylist-to-another-arraylist-in-java
+ you can add aaryList1.add(arrayLis2), but again when you change arrayList2 entire list --> arrayList1 gets changed.
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 18. Remove all elements from array List
+ arrayList.clear();
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 19. How to Iterate through LinkedList Instance in Java?
+ http://crunchify.com/how-to-iterate-through-linkedlist-instance-in-java/
+ 
+    LinkedList<String> linkedList = new LinkedList<String>();
+	        linkedList.add("eBay");
+	        linkedList.add("Paypal");
+	        linkedList.add("Google");
+	        linkedList.add("Yahoo");
+	        linkedList.add("IBM");
+	        linkedList.add("Facebook");
+ 
+	        // ListIterator approach
+	        System.out.println("ListIterator Approach: ");
+	        ListIterator<String> listIterator = linkedList.listIterator();
+	        while (listIterator.hasNext()) {
+	            System.out.println(listIterator.next());
+	        }
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 20.bit wise operation 1000 - 0110
+ Answer is 0010
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 21.A indicates an XOR operation, and ~ is a not (negation) operation
+ X ^ X = 0
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 22. Common mistakes when i code in NOTEPAD or TEXTPAD
+ 
+ Don't forget to import ArrayList or something
+ Make method static
+ Typo println 
+ There is No length() for arrayList there is size()
+ There is no arrayList.getValue(i) ...there is arrayList.get(i)
+ for methods keep adding the indendation then and there, later at the end of coding it will be cumbersome.
+ Don't forget void or return type
+ Always create object of class in public static void main, this way you can escape from making all variables or methods to static
+ Only helper methods can be private
+ always create an instance of class and call the method inside the class.
+ array.Length()   ---> WRONGcheck the Spelling of Length & no method by name length
+  array.length()   ---> WRONG & no method by name length .. just a instance length
+ You CANNOT have a method plus string in System.out.print("Before sorting " , printArray(array));
+ You need not import "import java.util.Arrays;" If you do int[] Array ={1,2,3,,45}; in your program.   
+ If you have already declared int i=0; previous to the for loop , don't declare it in the forlopp;
+ 
+ After Classname there should be no ()  .... its a mistake ..only for method these exists
+ In a HashSet there is no .get method & no .put method  .... check for .contains method & .add method. example below
+ HashSet<Integer> hSet = new HashSet<Integer>();
+
+		//loop elemnt of arrray and keep it in hashset
+		
+		for(int i : duplicateArray){
+			if(hSet.contains(i)){
+				hSet.add(i);
+Always the new object should start with small letters.
+
+Find mistake in below for loop
+for(int i = 0; i< ArrayA.length/2; i++){
+			ArrayA[i] = i+2
+		}
+
+Answer --> semicolon is missing at the end of the statement.
+
+ --------------------------------------------------------------------------------------------------------------------------------------
+ 23. How to declare an array in Java ( int or string)
+ 
+ int[] myIntArray = new int[3];
+int[] myIntArray = {1,2,3};
+int[] myIntArray = new int[]{1,2,3};
+For classes, for example String, it's the same:
+
+String[] myStringArray = new String[3];
+String[] myStringArray = {"a","b","c"};
+String[] myStringArray = new String[]{"a","b","c"};
+ --------------------------------------------------------------------------------------------------------------------------------------
+
+24. When asked to reverse print a linkedlist
+
+---You need not reverse the linkedlist -- but you just need to print the order of the linkedlist
+ --------------------------------------------------------------------------------------------------------------------------------------
+25. How to split a complete string in to letters in java 
+String x = "{}{}{{{}}{{{{{}}";
+		x.split("");
+
+Better --> String input ="{}{}{}{}{"
+        char[] inputArr=input.toCharArray();		
+ --------------------------------------------------------------------------------------------------------------------------------------
+26.difference between stack and queue in java
+LIFO FIFO
+ --------------------------------------------------------------------------------------------------------------------------------------
+27. What is the default capacity of ArrayList ?
+10
+reason:- not too small & not too big
+ --------------------------------------------------------------------------------------------------------------------------------------
+28. Assume int[] A = new int[100];
+What if we only assign up to A[5] and try to access A[6] ????
+
+it will be by default initialized to zero
+--------------------------------------------------------------------------------------------------------------------------------------
+29.  Spell hashtable
+
+HashTable<String, String>    ---->Wrong
+Hashtable<String, String>	 ---->Correct
+--------------------------------------------------------------------------------------------------------------------------------------
+30. What is the default value of a character ?
+'\u0000' 
+It's important to note that '\u0000' is not the same value as null
+--------------------------------------------------------------------------------------------------------------------------------------
+31.Find a loop in linkedlist ...
+Use two pointers ..advance one with one step and the other with two steps .. if a loop exists they should meet.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+32. Difference between i++ & ++i in for loop
+
+http://stackoverflow.com/questions/2315705/what-is-the-difference-between-i-i-in-for-loop-java
+--------------------------------------------------------------------------------------------------------------------------------------
+
+33. How HasMap works in Java ?
+
+http://javarevisited.blogspot.com/2011/02/how-hashmap-works-in-java.html
+
+hen we call put method, hashcode() method of key object is called so that hash function of map can find a bucket location
+ to store value object, which is actually index of internal array, known as table. 
+
+
+Since internal array of HashMap is of fixed size, and if you keep storing objects, at some point of time hash function 
+will return same bucket location for two different keys, this is called collision in HashMap. 
+
+HashMap implementation calls hashCode method on Key object and applies returned hashcode 
+into its own hashing function to find a bucket location for storing Entry object, important point to 
+mention is that HashMap in Java stores both key and value object as Map.Entry in bucket which is essential to 
+understand the retrieving logic. If people fails to recognize this and say it only stores Value in the bucket they will 
+fail to explain the retrieving logic of any object stored in Java HashMap 
+
+
+
+
+
+This issue is recently addressed in Java 8 by replacing linked list to tree to search in O(logN) time. 
+By the way, you can easily verify how HashMap work by looking at code of HashMap.java in your Eclipse IDE, 
+if you know how to attach source code of JDK in Eclipse.
+

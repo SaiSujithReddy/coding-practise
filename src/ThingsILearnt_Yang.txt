@@ -1,0 +1,52 @@
+1. Why Yang ?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Yang ?
+
+Yet Another next generation 
+Data modelling lang
+basically for Netconf - could be extended to Ovsdb, openflow
+Notifications, events 
+
+NETCONF is an IETF configuration management protocol and YANG is its data modeling language
+
+YANG is a data modeling language designed to write data models for the NETCONF protocol. It provides the following features:
+Human readable, and easy to learn representation 
+Hierarchical configuration data models
+Reusable types and groupings (structured types)
+Extensibility through augmentation mechanisms
+Supports definition of operations (RPCs)
+Formal constraints for configuration validation
+Data modularity through modules and sub-modules
+Well defined versioning rules
+
+
+
+YANG [1] is a data modeling language for the NETCONF network configuration protocol. 
+The name is an acronym for "Yet Another Next Generation". The YANG data modeling language was developed by the NETMOD [2] 
+working group in the Internet Engineering Task Force (IETF) and was published as RFC 6020 in October 2010. 
+The data modeling language can be used to model both configuration data as well as state data of network elements. 
+Furthermore, YANG can be used to define the format of event notifications emitted by network elements and it allows data modelers 
+to define the signature of remote procedure calls that can be invoked on network elements via the NETCONF protocol.
+
+YANG is a modular language representing data structures in an XML tree format. 
+The data modeling language comes with a number of builtin data types. 
+Additional application specific data types can be derived from the builtin data types. 
+More complex reusable data structures can be represented as groupings. YANG data models can use XPATH expressions to define constraints on 
+the elements of a YANG data model.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+3. What is NETCONF ?
+
+Distinction between configuration and state data 
+Multiple configuration data stores (candidate, running, startup)
+Configuration change validations
+Configuration change transactions 
+Selective data retrieval with filtering
+Streaming and playback of event notifications
+Extensible remote procedure call mechanism
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
