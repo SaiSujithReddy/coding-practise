@@ -4,16 +4,9 @@ package hackerrank;
  * Created by sai on 11/24/16.
  */
 
-public class HourGlass {
+public class HourGlass_v1 {
 
-    private static void printArrayElements (int[][] array){
-        for(int[] i : array) {
-            for(int j :  i) {
-                System.out.print(j + " ");
-            }
-            System.out.println();
-        }
-    }
+    private static int max = Integer.MIN_VALUE;
 
     private static int hourGlassSum(int[][] array) {
         int sum =0;
@@ -49,17 +42,14 @@ public class HourGlass {
         //Scanner in = new Scanner(System.in);
         int arr[][] = new int[][]{{-1, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0 },{0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0},{0, 0, 0, 0, 0, 0}};
-        int sum = hourGlassSum(generate2DArray(arr,0,0));
         for(int i =0; i< arr.length-2;i++) {
             for(int j=0;j<arr[0].length-2;j++){
-                int temp = hourGlassSum(generate2DArray(arr,i,j));
-                if(sum < temp) {
-                    sum  =temp;
-                }
+                max = Math.max(max,hourGlassSum(generate2DArray(arr,i,j)));
             }
         }
-        System.out.println(sum);
+        System.out.println(max);
     }
 }
 
 //learnt things - how to define a 2d array and initialize it
+// how to use math.max instead of initializing two variables.
