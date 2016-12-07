@@ -1,5 +1,5 @@
 
-public class PalidromeString {
+public class Palindrome_v05 {
 	
 	public static boolean findPalindrome(String variable)
 	{
